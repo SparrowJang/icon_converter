@@ -14,11 +14,13 @@ If you want to run it your device, please make sure you have installed this.
 
 ##Installation
 
+``` bash
 git clone https://github.com/SparrowJang/icon_converter
 
 cd icon\_converter
 
 sudo python setup.py install
+```
 
 #Usage
 
