@@ -17,7 +17,7 @@ If you want to run it your device, please make sure you have installed this.
 ``` bash
 git clone https://github.com/SparrowJang/icon_converter
 
-cd icon\_converter
+cd icon_converter
 
 sudo python setup.py install
 ```
