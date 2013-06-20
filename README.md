@@ -64,7 +64,7 @@ converter.convert( base64, size, border, format_type = "base64" )
 
 ```
 
-#####If you don't need arrow
+If you don't need arrow
 
 ``` python
 
@@ -75,7 +75,7 @@ converter.convert( data, size, border, arrow = False )
 converter.convert_by_path( path, size, border, arrow = False )
 ```
 
-#####Get a base64
+Get a base64
 
 ``` python
 
@@ -84,7 +84,7 @@ blob = converter.convert( data, size, border )
 blob.base64()
 ```
 
-#####Save a file
+Save a file
 
 ``` python
 
