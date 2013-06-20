@@ -34,7 +34,7 @@ from icon_converter import converter
 path = "http://example.com/test.png"
 
 #resize and crop image
-size = {"width":2,"height":2}
+size = {"width":40,"height":40}
 
 border = {
     "size":{"width":2,"height":2},
