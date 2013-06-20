@@ -14,7 +14,7 @@ If you want to run it your device, please make sure you have installed this.
 
 ##Installation
 
-git clone https://github.com/SparrowJang/icon\_converter
+git clone https://github.com/SparrowJang/icon_converter
 
 cd icon\_converter
 
@@ -51,7 +51,9 @@ blob = converter.convert_by_path( path, size, border )
 ``` python
 
 f = open( "test.png" )
+
 data = f.read()
+
 base64data = base64.b64encode( data )
 
 #binary data
@@ -62,7 +64,7 @@ converter.convert( base64, size, border, format_type = "base64" )
 
 ```
 
-###If you don't need arrow.
+####If you don't need arrow.
 
 ``` python
 
@@ -71,20 +73,18 @@ converter.convert( data, size, border, arrow = False )
 # or
 
 converter.convert_by_path( path, size, border, arrow = False )
-
 ```
 
-###Get a base64
+####Get a base64
 
 ``` python
 
 blob = converter.convert( data, size, border )
 
 blob.base64()
-
 ```
 
-###Save a file
+####Save a file
 
 ``` python
 
@@ -93,6 +93,5 @@ f = open( "arrow.png", "w" )
 f.write( blob.data )
 
 f.close()
-
 ```
 
