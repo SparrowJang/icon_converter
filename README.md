@@ -1,4 +1,4 @@
-#Converter Icon
+#Icon Converter
 
 ##Introduction
 
