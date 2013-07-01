@@ -38,8 +38,9 @@ def _setup_size_and_border( image_adapter, size, border ):
 
     image_adapter.border( {"width":1,"height":1}, border.get("color") )
 
-def _get_a_image_by_path( path ):
+def _get_a_image_by_url( path ):
     """
+    Get a image by https or http.
     """
     req = urllib2.Request( url = path )
     f = urllib2.urlopen(req)
@@ -53,7 +54,7 @@ def convert_by_path( path, size, border, arrow = True ):
 
     if re.match( "^https", path ):
 
-        image_data = _get_a_image_by_path( path )
+        image_data = _get_a_image_by_url( path )
 
         image_adapter = _create_image_adapter_by_blob( Blob( image_data ) )
 
