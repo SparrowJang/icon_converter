@@ -74,8 +74,14 @@ class TestConverterFunctions(unittest.TestCase):
 
        url = "http://twitter.github.io/bootstrap/assets/img/bs-docs-masthead-pattern.png"
 
+       https_url = "https://lh3.ggpht.com/-Et2lmf3zvQ0/UY1VoJDBx0I/AAAAAAAAGy4/6BMfW7peasc/s130/300x300.png"
+
        http_blob = converter.convert_by_path( url, self.size, self.border )
-       
+
+       https_blob = converter.convert_by_path( https_url, self.size, self.border )
+
+       self.assertTrue( isinstance( https_blob, Blob ) )
+
        self.assertTrue( isinstance( local_blob, Blob ) )
 
        self.assertTrue( isinstance( http_blob, Blob ) )

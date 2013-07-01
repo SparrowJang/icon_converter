@@ -3,6 +3,8 @@ from pgmagick import Image
 from pgmagick import Geometry, Color, Blob
 import adapter
 import base64
+import urllib2
+import re
 
 def _create_image_adapter_by_blob( blob ):
     """
@@ -36,13 +38,28 @@ def _setup_size_and_border( image_adapter, size, border ):
 
     image_adapter.border( {"width":1,"height":1}, border.get("color") )
 
+def _get_a_image_by_path( path ):
+    """
+    """
+    req = urllib2.Request( url = path )
+    f = urllib2.urlopen(req)
+    return f.read()
+
 
 def convert_by_path( path, size, border, arrow = True ):
     """
     Create a icon by local or remote image.
     """
 
-    image_adapter = _create_image_adapter_by_blob( path )
+    if re.match( "^https", path ):
+
+        image_data = _get_a_image_by_path( path )
+
+        image_adapter = _create_image_adapter_by_blob( Blob( image_data ) )
+
+    else:
+
+        image_adapter = _create_image_adapter_by_blob( path )
 
     _setup_size_and_border( image_adapter, size, border )
 
