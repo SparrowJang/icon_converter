@@ -1,18 +1,18 @@
-#Icon Converter
+# Icon Converter
 
-##Introduction
+## Introduction
 
 This is a icon converter.It is able to transform image to icon.
 
 
-##Dependency
+## Dependency
 
 If you want to run it your device, please make sure you have installed this.
 
 * pgmagick > 0.5.0
 
 
-##Installation
+## Installation
 
 ``` bash
 git clone https://github.com/SparrowJang/icon_converter
@@ -22,11 +22,11 @@ cd icon_converter
 sudo python setup.py install
 ```
 
-#Usage
+# Usage
 
 ## Basic example
 
-###Use http or local file to convert
+### Use http or local file to convert
 
 ``` python
 
@@ -48,7 +48,7 @@ blob = converter.convert_by_path( path, size, border )
 
 ```
 
-###User binary or base64 to convert
+### User binary or base64 to convert
 
 ``` python
 
